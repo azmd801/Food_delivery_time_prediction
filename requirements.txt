@@ -3,4 +3,7 @@ pandas
 flask
 seaborn
 matplotlib
--e .
+geopy
+scikit-learn
+
+# -e .
