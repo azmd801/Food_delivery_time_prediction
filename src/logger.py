@@ -8,15 +8,9 @@ os.makedirs(logs_path,exist_ok=True)
 
 LOG_FILE_PATH=os.path.join(logs_path,LOG_FILE)
 
-def setup_logging():
-    """
-    Sets up logging configuration for the project.
 
-    Returns:
-        None
-    """
-    logging.basicConfig(
-        filename=LOG_FILE_PATH,
-        format="[ %(asctime)s ] %(lineno)d %(name)s - %(levelname)s - %(message)s",
-        level=logging.INFO
+logging.basicConfig(
+    filename=LOG_FILE_PATH,
+    format="[ %(asctime)s ] %(lineno)d %(name)s - %(levelname)s - %(message)s",
+    level=logging.INFO
     )

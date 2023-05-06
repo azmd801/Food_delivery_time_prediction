@@ -1,0 +1,6 @@
+,Delivery_person_Age,Delivery_person_Ratings,Restaurant_latitude,Restaurant_longitude,Delivery_location_latitude,Delivery_location_longitude,Time_Orderd,Time_Order_picked,Weather_conditions,Road_traffic_density,Vehicle_condition,Type_of_order,Type_of_vehicle,multiple_deliveries,Festival,City,Day,restaurant_delivery_location_dist
+0,35.0,4.6,0.0,0.0,0.07,0.07,17.25,17.5,Windy,Medium,1,Drinks,scooter,1.0,No,Metropolitian,20,10.983241696284242
+1,38.0,4.7,23.374989,85.335486,23.414989,85.375486,13.5,13.666666666666666,Sandstorms,High,2,Buffet,motorcycle,1.0,No,Metropolitian,5,6.028567025413262
+2,36.0,4.8,17.424114,78.347554,17.554114,78.477554,22.583333333333332,22.666666666666668,Stormy,Low,2,Drinks,electric_scooter,0.0,No,Urban,8,19.940715990099818
+3,27.0,5.0,22.695207,75.866059,22.735207,75.906059,16.583333333333332,16.666666666666668,Stormy,Medium,2,Drinks,motorcycle,0.0,No,Metropolitian,19,6.042266599295314
+4,38.0,4.7,22.514119,88.362504,22.604119,88.452504,20.833333333333332,20.916666666666668,Cloudy,Jam,0,Snack,motorcycle,1.0,No,Metropolitian,18,13.60206655100431
