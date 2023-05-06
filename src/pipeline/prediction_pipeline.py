@@ -2,7 +2,7 @@ import sys
 import os
 from src.exception import CustomException
 from src.logger import logging
-from src.utils import load_object
+from src.utils import load_object,processing_Date_Time_features,distance
 import pandas as pd
 import numpy as np
 
@@ -39,7 +39,7 @@ class PredictPipeline:
 
 
 class CustomData:
-    def __init__(self, features: list, data_point: tuple):
+    def __init__(self,**kwargs):
         """
         Initialize CustomData class instance
 
@@ -47,8 +47,8 @@ class CustomData:
         - features (list): list of feature names
         - data_point (tuple): tuple of data values
         """
-        self.features = features
-        self.data_point = data_point
+        self.datapoint = kwargs
+        # self.data_point = data_point
 
     def get_data_as_dataframe(self) -> pd.DataFrame:
         """
@@ -58,8 +58,18 @@ class CustomData:
         - pd.DataFrame: dataframe containing data point with provided features
         """
         try:
-            df = pd.DataFrame([self.data_point], columns=self.features)
+            df = pd.DataFrame(data=[self.datapoint.values()], columns=self.datapoint.keys() )
             logging.info('Dataframe Gathered')
+            logging.info(df.head())
+
+            # Applying some transformation on Gathered data frame for prepreceoosr pickle object to read
+            logging.info('Applying some transformation on Gathered data frame for prepreceoosr pickle object to read')
+            df = processing_Date_Time_features(df)
+            df['restaurant_delivery_location_dist'] = df.apply(lambda row: distance(row.Restaurant_latitude, row.Restaurant_longitude, \
+                                                           row.Delivery_location_latitude,row.Delivery_location_longitude),axis=1)
+            
+            df = df.drop(['Month','Year'],axis=1)
+
             return df
 
         except Exception as e:

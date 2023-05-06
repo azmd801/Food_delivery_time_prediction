@@ -1,0 +1,120 @@
+<html>
+<body>
+<form action="{{url_for('predict_datapoint')}}" method="POST">
+    <div class="form-group">
+        <label for="delivery_person_age">Delivery Person Age:</label>
+        <input type="text" id="delivery_person_age" name="delivery_person_age" placeholder="Enter delivery person's age (int)">
+    </div>
+
+    <div class="form-group">
+        <label for="delivery_person_ratings">Delivery Person Ratings:</label>
+        <input type="text" id="delivery_person_ratings" name="delivery_person_ratings" placeholder="Enter delivery person's ratings (float)">
+    </div>
+
+    <div class="form-group">  
+        <label for="restaurant_latitude">Restaurant Latitude:</label>
+        <input type="text" id="restaurant_latitude" name="restaurant_latitude" placeholder="Enter restaurant's latitude (float)">
+    </div>
+
+    <div class="form-group">  
+        <label for="restaurant_longitude">Restaurant Longitude:</label>
+        <input type="text" id="restaurant_longitude" name="restaurant_longitude" placeholder="Enter restaurant's longitude (float)">
+    </div>
+
+    <div class="form-group">  
+        <label for="delivery_location_latitude">Delivery Location Latitude:</label>
+        <input type="text" id="delivery_location_latitude" name="delivery_location_latitude" placeholder="Enter delivery location's latitude (float)">
+    </div>
+
+    <div class="form-group">  
+        <label for="delivery_location_longitude">Delivery Location Longitude:</label>
+        <input type="text" id="delivery_location_longitude" name="delivery_location_longitude" placeholder="Enter delivery location's longitude (float)">
+    </div>
+
+    <div class="form-group">  
+        <label for="order_date">Order Date:</label>
+        <input type="text" id="order_date" name="order_date" placeholder="Enter order date (YYYY-MM-DD)">
+    </div>
+
+    <div class="form-group">  
+        <label for="time_ordered">Time Ordered:</label>
+        <input type="text" id="time_ordered" name="time_ordered" placeholder="Enter time ordered (HH:MM:SS)">
+    </div>
+
+    <div class="form-group">  
+        <label for="time_picked">Time Picked:</label>
+        <input type="text" id="time_picked" name="time_picked" placeholder="Enter time picked (HH:MM:SS)">
+    </div>
+
+    <div class="form-group">  
+      <label for="multiple_deliveries">multiple_deliveries:</label>
+      <input type="text" id="multiple_deliveries" name="multiple_deliveries" placeholder="Enter multiple_deliveries">
+    </div>
+
+    <div class="form-group">
+        <label for="weather_conditions">Weather Conditions:</label>
+        <select id="weather_conditions" name="weather_conditions">
+            <option value="Fog">Fog</option>
+            <option value="Stormy">Stormy</option>
+            <option value="Sandstorms">Sandstorms</option>
+            <option value="Windy">Windy</option>
+            <option value="Cloudy">Cloudy</option>
+            <option value="Sunny">Sunny</option>
+            <option value="">N/A</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="road_traffic_density">Road Traffic Density:</label>
+        <select id="road_traffic_density" name="road_traffic_density">
+            <option value="Jam">Jam</option>
+            <option value="High">High</option>
+            <option value="Medium">Medium</option>
+            <option value="Low">Low</option>
+            <option value="">N/A</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="type_of_order">Type of Order:</label>
+        <select id="type_of_order" name="type_of_order">
+          <option value="Snack">Snack</option>
+          <option value="Meal">Meal</option>
+          <option value="Drinks">Drinks</option>
+          <option value="Buffet">Buffet</option>
+        </select>
+      </div>
+    
+      <div class="form-group">
+        <label for="type_of_vehicle">Type of Vehicle:</label>
+        <select id="type_of_vehicle" name="type_of_vehicle">
+          <option value="motorcycle">Motorcycle</option>
+          <option value="scooter">Scooter</option>
+          <option value="electric_scooter">Electric Scooter</option>
+          <option value="bicycle">Bicycle</option>
+        </select>
+      </div>
+    
+      <div class="form-group">
+        <label for="festival">Festival:</label>
+        <select id="festival" name="festival">
+          <option value="No">No</option>
+          <option value="Yes">Yes</option>
+        </select>
+      </div>
+    
+      <div class="form-group">
+        <label for="city">City:</label>
+        <select id="city" name="city">
+          <option value="Metropolitian">Metropolitian</option>
+          <option value="Urban">Urban</option>
+          <option value="Semi-Urban">Semi-Urban</option>
+        </select>
+      </div>
+    
+      <div style="clear:both;"></div>
+      <input type="submit" value="Submit">
+      
+    </form>
+    </body>
+    </html>

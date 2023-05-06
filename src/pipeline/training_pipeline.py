@@ -22,9 +22,9 @@ def main() -> None:
     test_arr: np.array
     train_arr, test_arr,_ = data_transformation.initiate_data_transformation(train_data_path, test_data_path)
 
-    # Initiate Model Training
-    model_trainer = ModelTrainer()
-    model_trainer.initate_model_training(train_arr, test_arr)
+    # # Initiate Model Training
+    # model_trainer = ModelTrainer()
+    # model_trainer.initate_model_training(train_arr, test_arr)
 
 
 if __name__ == '__main__':

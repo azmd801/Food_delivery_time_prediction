@@ -134,6 +134,9 @@ class DataTransformation:
             input_feature_test_df=test_df.drop(columns=drop_columns,axis=1)
             target_feature_test_df=test_df[target_column_name]
 
+            # logging.info(f"Modified dat before feading it to transformation pipeline: \n{input_feature_train_df.head().to_string()}")
+            input_feature_train_df.head().to_csv('mod.csv')
+
             
             numerical_cols = input_feature_train_df.columns[input_feature_train_df.dtypes!='object']
             categorical_cols = input_feature_train_df.columns[input_feature_train_df.dtypes=='object']
