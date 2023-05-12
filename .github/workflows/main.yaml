@@ -3,7 +3,7 @@ name: workflow
 on:
   push:
     branches:
-      - main
+      - exploring_docker
     paths-ignore:
       - 'README.md'
 
