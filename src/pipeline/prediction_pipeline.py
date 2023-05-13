@@ -40,15 +40,8 @@ class PredictPipeline:
 
 class CustomData:
     def __init__(self,**kwargs):
-        """
-        Initialize CustomData class instance
-
-        Args:
-        - features (list): list of feature names
-        - data_point (tuple): tuple of data values
-        """
+  
         self.datapoint = kwargs
-        # self.data_point = data_point
 
     def get_data_as_dataframe(self) -> pd.DataFrame:
         """
@@ -60,7 +53,7 @@ class CustomData:
         try:
             df = pd.DataFrame(data=[self.datapoint.values()], columns=self.datapoint.keys() )
             logging.info('Dataframe Gathered')
-            logging.info(df.head())
+            # logging.info(df.head())
 
             # Applying some transformation on Gathered data frame for prepreceoosr pickle object to read
             logging.info('Applying some transformation on Gathered data frame for prepreceoosr pickle object to read')

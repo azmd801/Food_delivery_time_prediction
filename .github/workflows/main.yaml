@@ -3,7 +3,7 @@ name: workflow
 on:
   push:
     branches:
-      - exploring_docker
+      - main
     paths-ignore:
       - 'README.md'
 
@@ -62,7 +62,7 @@ jobs:
           docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
           echo "::set-output name=image::$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
           
-        
+          
   Continuous-Deployment:
     needs: build-and-push-ecr-image
     runs-on: self-hosted
